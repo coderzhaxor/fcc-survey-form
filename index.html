@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" id="background">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FCC Survey Form</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="background">
+      <header>
+        <h1 id="title">Survey Bamboo Fest</h1>
+        <p id="description">Terimakasih telah meluangkan waktu mengisi survey kami</p>
+      </header>
+
+      <!-- begin form -->
+      <form action="" id="survey-form">
+        <!-- nama -->
+        <label for="name" id="name-label">Nama</label>
+        <input type="text" name="name" id="name" placeholder="Masukan nama anda..." required />
+
+        <!-- email -->
+        <label for="email" id="email-label">Email</label>
+        <input type="email" name="email" id="email" placeholder="Masukan email anda..." required />
+
+        <!-- umur -->
+        <label for="number" id="number-label">Umur</label>
+        <input type="number" min="12" max="50" name="umur" id="number" placeholder="Masukan umur anda..." />
+
+        <!-- pekerjaan -->
+        <label for="role">Profesi anda</label>
+        <select name="role" id="dropdown" required>
+          <option disabled selected value>Pilih profesi anda</option>
+          <option value="pelajar">Pelajar</option>
+          <option value="seniman">Seniman</option>
+          <option value="kritikus">Kritikus</option>
+          <option value="guru">Guru</option>
+          <option value="desainer">Desainer</option>
+        </select>
+
+        <!-- kerajinan -->
+        <div class="radio">
+          <label for="">Kerajinan mana yang paling anda sukai ?</label>
+          <label id="radio-label">
+            <input type="radio" name="galeri" id="galeri1" value="kipas" />
+            <span>Kipas Bambu</span>
+          </label>
+          <label id="radio-label">
+            <input type="radio" name="galeri" id="galeri2" value="sangkar" />
+            <span>Sangkar Burung</span>
+          </label>
+          <label id="radio-label">
+            <input type="radio" name="galeri" id="galeri3" value="vas" />
+            <span>Vas Bunga</span>
+          </label>
+        </div>
+
+        <!-- tracing -->
+        <label for="event">Dari mana anda tahu event ini ?</label>
+        <select name="event" id="dropdown" required>
+          <option disabled selected value>Pilihan</option>
+          <option value="instagram">Instagram</option>
+          <option value="facebook">Facebook</option>
+          <option value="tiktok">Tiktok</option>
+          <option value="keluarga">Keluarga</option>
+          <option value="teman">Teman</option>
+        </select>
+
+        <!-- review -->
+        <div class="review-container">
+          <label for="review">Manakah yang anda sukai dari acara ini ?</label>
+          <label id="checkbox-label">
+            <input type="checkbox" name="review" id="review" value="wayang" />
+            <span>Pertunjukan Wayang</span>
+          </label>
+          <label id="checkbox-label">
+            <input type="checkbox" name="review" id="review" value="karinding" />
+            <span>Konser Karinding Attack</span>
+          </label>
+          <label id="checkbox-label">
+            <input type="checkbox" name="review" id="review" value="souvenir" />
+            <span>Belanja Souvenir</span>
+          </label>
+        </div>
+
+        <!-- pesan kesan -->
+        <div class="text">
+          <label for="pesan">Pesan dan kesan untuk kami</label>
+          <textarea name="pesan" id="textarea" placeholder="Masukan pesan dan kesan anda disini..."></textarea>
+        </div>
+
+        <!-- button -->
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </main>
+
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.22/dist/vanta.topology.min.js"></script>
+    <script>
+      VANTA.TOPOLOGY({
+        el: "#background",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: true,
+        minHeight: 100.0,
+        minWidth: 100.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+      });
+    </script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  </body>
+</html>
